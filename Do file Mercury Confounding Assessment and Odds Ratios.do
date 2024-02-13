@@ -72,37 +72,16 @@ svy, subpop(subpop4 if riagendr==2): ta lbxthg_Q4 low_cog,col percent
 
 
 
-
-********************************************************
-*     Regression Model & OR for Cadmium                *
-********************************************************
-*Crude or minimally adjusted OR (forced variable:age)
-xi: svy,subpop(subpop4): logit low_cog i.lbxbcd_Q4 ridageyr , or
-
-*Fully adjusted OR for cadmium
-xi: svy,subpop(subpop4): logit low_cog i.lbxbcd_Q4 ridageyr i.education, or
-
-
-********************************************************
-*     Regression Model & OR for Lead                   *
-********************************************************
-*Crude or minimally adjusted OR (do we force variables?)
-xi: svy,subpop(subpop4): logit low_cog ridageyr i.lbxbpb_Q4, or
-
-*Fully adjusted OR for lead
-xi: svy,subpop(subpop4): logit low_cog ridageyr i.lbxbpb_Q4  otherconf, or
-
-
 ********************************************************
 *     Regression Model & OR for Mercury                *
 ********************************************************
-*Crude or minimally adjusted OR (do we force variables?)
+*Minimally adjusted OR (adjusted for age)
 xi: svy,subpop(subpop4): logit low_cog ridageyr i.lbxthg_Q4, or
 
 *Fully adjusted OR for merury
-xi: svy,subpop(subpop4): logit low_cog ridageyr i.lbxthg_Q4  otherconf, or
+xi: svy,subpop(subpop4): logit low_cog ridageyr i.lbxthg_Q4  i.education, or
 
-
+********************************************************
 
 
 
