@@ -1,7 +1,7 @@
 *******************************************
 * Analyst name: Hoda Mohammed
 * Epidata Project Heavy metals and Cognition
-* EMM (stratification and/or interaction), sensitivity analyses
+* Figure 2
 * Last updated: Nov 8 2022
 *******************************************
 *generate memory test with no missing:
@@ -72,41 +72,6 @@ ta subpop4 countif4
 *Bar chart
 graph bar (asis) counts, over(freqinQ1)
 
-
-//////////////////////////////////
-*Sensitivity analysis if we changed definition of outcome?
+*******************************************
 
 
-*OR for sensitivity analysis minimally adjusted
-xi:svy,subpop(subpop4): logit countif3 i.lbxbcd_Q4 ridageyr, or
-xi:svy,subpop(subpop4): logit countif3 i.lbxbpb_Q4 ridageyr, or
-xi:svy,subpop(subpop4): logit countif3 i.lbxthg_Q4 ridageyr, or
-
-
-xi:svy,subpop(subpop4): logit countif2 i.lbxbcd_Q4 ridageyr, or
-xi:svy,subpop(subpop4): logit countif2 i.lbxbpb_Q4 ridageyr, or
-xi:svy,subpop(subpop4): logit countif2 i.lbxthg_Q4 ridageyr, or
-
-
-xi:svy,subpop(subpop4): logit countif1 i.lbxbcd_Q4 ridageyr, or
-xi:svy,subpop(subpop4): logit countif1 i.lbxbpb_Q4 ridageyr, or
-xi:svy,subpop(subpop4): logit countif1 i.lbxthg_Q4 ridageyr, or
-
-**************************************************
-*OR for sensitivity analysis fully adjusted
-xi:svy,subpop(subpop4): logit countif3 i.lbxbcd_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-xi:svy,subpop(subpop4): logit countif3 i.lbxbpb_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-xi:svy,subpop(subpop4): logit countif3 i.lbxthg_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-
-
-xi:svy,subpop(subpop4): logit countif2 i.lbxbcd_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-xi:svy,subpop(subpop4): logit countif2 i.lbxbpb_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-xi:svy,subpop(subpop4): logit countif2 i.lbxthg_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-
-
-xi:svy,subpop(subpop4): logit countif1 i.lbxbcd_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-xi:svy,subpop(subpop4): logit countif1 i.lbxbpb_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-xi:svy,subpop(subpop4): logit countif1 i.lbxthg_Q4 ridageyr i.education i.race_4cat i.fpl_cat i.alq_3cat, or
-
-
-****countif2 results in a trend for all metals. both minimally and fully adjusted!
