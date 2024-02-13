@@ -76,7 +76,7 @@ label values smokeEver smokeEver
 ta smokeEver,m
 
 *Recode alcohol: 
-//calling 0 if past  //1 if never // 2 if current
+//coding as 0 if past  //1 if never // 2 if current
 gen alq_3cat=.
 replace alq_3cat= 0 if (alq101==1 | alq110==1) & alq120q==0
 replace alq_3cat= 1 if alq101==2 & alq110==2
@@ -171,7 +171,7 @@ gen subpop4=0
 replace subpop4=1 if subpop3==1 & miss_cf==0
 browse subpop3 miss_cf subpop4
 ta subpop4
-
+*********************************************************
 
 
 
